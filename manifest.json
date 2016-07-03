@@ -4,14 +4,18 @@
   "version": "0.0.1",
 
   "description": "Lets a user click 'next' through trademe search results",
+  "icons": {},
 
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["jquery.js", "trademe-next.js"],
-      "run_at": "document_end"
-    }
-  ],
+  "page_action": {
+    "default_icon": "./icon.png",
+    "default_title": "Trademe Next"
+  },
+
+  "content_scripts": [{
+    "matches": ["*://www.trademe.co.nz/*"],
+    "js": ["jquery.js", "trademe-next.js"],
+    "run_at": "document_end"
+  }],
   "permissions": [
     "tabs"
   ]
