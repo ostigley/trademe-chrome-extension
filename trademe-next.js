@@ -16,7 +16,11 @@ if (isSearchUrl) {
 } else if (prevResults.indexOf(pageUrl) > -1) {
 	console.log('Your in a result url')
 	var nextUrl = prevResults[prevResults.indexOf(pageUrl)+1]
-	$('.banner-content').append(`<a href=${nextUrl} >View next in search results</a>`)
+	$('.banner-content').append(
+		`<button style="width:250px" id="Watchlist_SaveToWatchlistButton">
+			<a href=${nextUrl} >View next in search results</a>
+		</button>`)
 }
 
 
+ 
