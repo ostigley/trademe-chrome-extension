@@ -1,0 +1,1 @@
+$('body').prepend('<p>Hello world</p>')
