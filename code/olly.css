@@ -1,0 +1,20 @@
+.olly-button {    
+	color: #b25e1f;
+  background-color: #fec40d;
+  border-color: #ffa800;
+  text-decoration: none;
+  margin: 0;
+	font-weight: bold;
+	font-size: 16px;
+	width: 50px;
+	border-radius: 10%;
+}
+
+#olly-link {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.olly-div {
+	padding-top: 3px;
+}
