@@ -1,5 +1,4 @@
 var prevResults = JSON.parse(localStorage.getItem('trademeSearchResults'))
-console.log(prevResults)
 var results = prevResults.results ? prevResults.results : null
 
 const pageUrl = window.location.href
@@ -19,11 +18,26 @@ if (isSearchUrl) {
 	localStorage.setItem('trademeSearchResults', JSON.stringify(searchData))
 } else if (results.indexOf(pageUrl) > -1) {
 	var nextUrl = results[results.indexOf(pageUrl)+1]
-	var button = document.createElement('button')
-	button.setAttribute('id', 'olly')
-	button.setAttribute('style', 'width:250px')
-	button.innerHTML = `<a href=${nextUrl} >View next in search results</a>`
-	document.querySelector('.listingBreadCrumbs').appendChild(button)
+	var prevUrl = results[results.indexOf(pageUrl)-1]
+	var button1 = document.createElement('button')
+	button1.setAttribute('class', 'olly-button')
+	button1.innerHTML = `<a href=${nextUrl} > >> </a>`
+	
+	var button2 = document.createElement('button')
+	button2.setAttribute('class', 'olly-button')
+	button2.innerHTML = `<a href=${prevUrl} > << </a>`
+
+	var mydiv = document.createElement('div')
+	mydiv.setAttribute('id', 'olly-div')
+	var mylink = document.createElement('a')
+	mylink.setAttribute('href', prevResults.url)
+	mylink.setAttribute('id', 'olly-link')
+	mylink.innerHTML = '  Search Results  '
+
+	mydiv.appendChild(button2)
+	mydiv.appendChild(mylink)
+	mydiv.appendChild(button1)
+	document.querySelector('.listingBreadCrumbs').appendChild(mydiv)
 }
 
 
