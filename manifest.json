@@ -3,10 +3,7 @@
   "name": "Trademe Next",
   "version": "0.0.1",
 
-  "description": "This extension improves the Trademe.co.nz user experience by 
-    appending a 'view next' button to a Trademe.co.nz listing page.  The link 
-    will take the user to the next item in the search results, removing 
-    the need to click 'back' to the results, then clicking to the next listing.",
+  "description": "This extension improves the Trademe.co.nz user experience by appending a 'view next' button to a Trademe.co.nz listing page.",
   "icons": {
     "48": "./icon.png",
     "128": "./icon.png"
@@ -16,6 +13,7 @@
     {
       "matches": ["*://www.trademe.co.nz/*"],
       "js": ["trademe-next.js"],
+      "css": ["olly.css"],
       "run_at": "document_end"
     }
   ],
