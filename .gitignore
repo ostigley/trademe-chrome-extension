@@ -4,4 +4,5 @@ chrome-driver/
 code.zip
 code.pem
 code.crx
+selenium-debug.log
 .DS_Store
