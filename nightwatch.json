@@ -29,11 +29,13 @@
         "path" : ""
       },
       "desiredCapabilities": {
+        "binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
         "browserName": "chrome",
         "javascriptEnabled": true,
         "acceptSslCerts": true,
         "chromeOptions": {
-          "extensions": ["Tradme Next"] 
+          "args": [],
+          "extensions": ["--load-extension=./packed.crx"] 
         }
       }
     },
@@ -43,7 +45,9 @@
         "binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
         "browserName": "chrome",
         "javascriptEnabled": true,
-        "acceptSslCerts": true
+        "acceptSslCerts": true,
+        "chromeOptions": {
+          "args": []        }
       }
     }
   }

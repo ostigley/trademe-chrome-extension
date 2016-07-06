@@ -9,7 +9,8 @@ module.exports = {
       .pause('3000')
       .click(".tile-4")
       .pause('3000')
-      
+      .assert.visible('<div id=olly-div >')
+
       .end()
   },
 
